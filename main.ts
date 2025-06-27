@@ -3,17 +3,17 @@
  * From microbit/micropython Chinese community.
  * http://www.micropython.org.cn
  */
-
 enum BMP280_I2C_ADDRESS {
     //% block="0x76"
     ADDR_0x76 = 0x76,
     //% block="0x77"
     ADDR_0x77 = 0x77
 }
+
 /**
  * BMP280 block
  */
-//% weight=100 color=#70c0f0 icon="\uf042" block="BMP280"
+ //% weight=100 color=#70c0f0 icon="\uf042" block="BMP280"
 namespace BMP280 {
     let BMP280_I2C_ADDR = BMP280_I2C_ADDRESS.ADDR_0x76
 
@@ -51,8 +51,10 @@ namespace BMP280 {
     let dig_P7 = getInt16LE(0x9A)
     let dig_P8 = getInt16LE(0x9C)
     let dig_P9 = getInt16LE(0x9E)
+
     setreg(0xF4, 0x2F)
     setreg(0xF5, 0x0C)
+
     let T = 0
     let P = 0
 
@@ -82,6 +84,10 @@ namespace BMP280 {
      * get pressure
      */
     //% blockId="BMP280_GET_PRESSURE" block="get pressure"
+    //% block.loc.de="Druck abrufen"
+    //% block.loc.es="obtener presión"
+    //% block.loc.it="ottieni pressione"
+    //% block.loc.el="λήψη πίεσης"
     //% weight=80 blockGap=8
     export function pressure(): number {
         get();
@@ -92,6 +98,10 @@ namespace BMP280 {
      * get temperature
      */
     //% blockId="BMP280_GET_TEMPERATURE" block="get temperature"
+    //% block.loc.de="Temperatur abrufen"
+    //% block.loc.es="obtener temperatura"
+    //% block.loc.it="ottieni temperatura"
+    //% block.loc.el="λήψη θερμοκρασίας"
     //% weight=80 blockGap=8
     export function temperature(): number {
         get();
@@ -102,6 +112,10 @@ namespace BMP280 {
      * power on
      */
     //% blockId="BMP280_POWER_ON" block="Power On"
+    //% block.loc.de="Einschalten"
+    //% block.loc.es="Encender"
+    //% block.loc.it="Accendere"
+    //% block.loc.el="Ενεργοποίηση"
     //% weight=61 blockGap=8
     export function PowerOn() {
         setreg(0xF4, 0x2F)
@@ -111,6 +125,10 @@ namespace BMP280 {
      * power off
      */
     //% blockId="BMP280_POWER_OFF" block="Power Off"
+    //% block.loc.de="Ausschalten"
+    //% block.loc.es="Apagar"
+    //% block.loc.it="Spegnere"
+    //% block.loc.el="Απενεργοποίηση"
     //% weight=60 blockGap=8
     export function PowerOff() {
         setreg(0xF4, 0)
@@ -120,6 +138,10 @@ namespace BMP280 {
      * set I2C address
      */
     //% blockId="BMP280_SET_ADDRESS" block="set address %addr"
+    //% block.loc.de="I2C-Adresse festlegen %addr"
+    //% block.loc.es="establecer dirección I2C %addr"
+    //% block.loc.it="imposta indirizzo I2C %addr"
+    //% block.loc.el="ορισμός διεύθυνσης I2C %addr"
     //% weight=50 blockGap=8
     export function Address(addr: BMP280_I2C_ADDRESS) {
         BMP280_I2C_ADDR = addr
