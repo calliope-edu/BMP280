@@ -1,6 +1,6 @@
 # BMP280
 
-makecode BMP280 Digital Pressure Sensor package for micro:bit  
+MakeCode BMP280 Digitaler Drucksensor Erweiterung – angepasst für den Calliope mini
 
 Author: shaoziyang  
 Date:   2018.Mar  
@@ -9,34 +9,32 @@ Date:   2018.Mar
   
 ![](https://raw.githubusercontent.com/microbit-makecode-packages/BMP280/master/bmp280.jpg)
 
-## usage
+## Verwendung
 
-open your microbit makecode project, in Add Package, paste  
+Öffne deinen Calliope-mini-MakeCode-Projekt, klicke auf Erweiterungen und füge folgende URL hinzu:
 
-https://github.com/microbit-makecode-packages/BMP280  
+https://github.com/calliope-edu/BMP280  
 
-to search box then search.
-
-## I2C Address  
+## I2C Adresse  
 
 - 0x76/0x77  
 
 ## API
 
-- function pressure()  
-get pressure in hpa  
+- function pressure() 
+liefert Druck in Pa
 
-- function temperature()  
-return temperature in Celsius.
+- function temperature() 
+gibt die Temperatur in Celsius zurück.
 
 - function PowerOn()
-turn on BMP280.
+schaltet den BMP280 ein.
 
-- function PowerOff()  
-goto sleep mode  
+- function PowerOff() 
+geht in den Schlafmodus
 
-- function Address(addr: BMP280_I2C_ADDRESS)  
-set BMP280's I2C address. addr may be:  
+- function Address(addr: BMP280_I2C_ADDRESS) 
+setzt die I2C-Adresse des BMP280. addr kann sein:
   - BMP280_I2C_ADDRESS.ADDR_0x76
   - BMP280_I2C_ADDRESS.ADDR_0x77
 
@@ -52,7 +50,7 @@ Copyright (c) 2018, microbit/micropython Chinese community
 
 ## Supported targets
 
-* for PXT/microbit
+* for PXT/calliopemini
 
 
 [From microbit/micropython Chinese community](http://www.micropython.org.cn)
