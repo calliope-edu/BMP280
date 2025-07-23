@@ -1,9 +1,8 @@
-# BMP280
+# Bosch Sensortech BMP280
 
 MakeCode BMP280 Digitaler Drucksensor Erweiterung – angepasst für den Calliope mini
 
-Author: shaoziyang  
-Date:   2018.Mar  
+Author: shaoziyang
 
 ![](https://raw.githubusercontent.com/microbit-makecode-packages/BMP280/master/icon.png)  
   
